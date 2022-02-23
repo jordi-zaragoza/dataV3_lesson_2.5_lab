@@ -4,7 +4,7 @@ SELECT * FROM sakila.actor
 WHERE first_name = 'penelope'; -- done
 
 -- 2. How many films (movies) are available for rent and how many films have been rented?
-SELECT count(*) FROM sakila.inventory; -- 5581 movies available for rent
+SELECT count(distinct(film_id)) FROM sakila.inventory; -- 958 movies available for rent
 SELECT count(distinct(inventory_id)) FROM sakila.rental; -- 4581 movies have been rented
 
 -- 3. What are the shortest and longest movie duration? Name the values max_duration and min_duration.
